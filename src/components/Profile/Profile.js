@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import css from "./Profile.module.css";
 
 // const { user: { username, tag, location, avatar, stats: { followers, views, likes } } } = props; - зробили деструктуризацію
-export const Profile = ({ user: { username, tag, location, avatar, stats: { followers, views, likes } } }) => {
+const Profile = ({ user: { username, tag, location, avatar, stats: { followers, views, likes } } }) => {
     return (
     <div className={css.profile}>
     <div className={css.description}>
@@ -32,6 +32,8 @@ export const Profile = ({ user: { username, tag, location, avatar, stats: { foll
     </ul>
   </div>)
 }
+
+export default Profile;
 
 Profile.propTypes = {
   user: PropTypes.shape({
